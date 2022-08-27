@@ -60,13 +60,20 @@ Use "nexsync [command] --help" for more information about a command.
 Sync repos between Nexus3 servers.
 
 ```bash
-./nexsync sync --urlfrom="<repo URL to sync from>" --userfrom="<user with download permissions>" --passfrom='<password for userFrom>' --repofrom="<repo to sync from>" --tmpdir="./tmp" --urlto="<repo URL to sync to>" --userto="<user with upload permissions>" --passto='<password for userTo>' --repoto="<repo to sync to>"
+./nexsync sync --urlfrom="<repo URL to sync from>" --repofrom="<repo to sync from>" \
+    --userfrom="<user with download permissions>" --passfrom='<password for userFrom>' --tmpdir="./tmp" \
+    --urlto="<repo URL to sync to>" --repoto="<repo to sync to>" \
+    --userto="<user with upload permissions>" --passto='<password for userTo>'
 ```
 
 Sync artifact versions fron Nexus2 to Nexus3 server.
 
 ```bash
-./nexsync syncartifact --urlfrom="<repo URL to sync from>" --userfrom="<user with download permissions>" --passfrom='<password for userFrom>' --repofrom="<repo to sync from>" --tmpdir="./tmp" --urlto="<repo URL to sync to>" --userto="<user with upload permissions>" --passto='<password for userTo>' --repoto="<repo to sync to>t" --artifact="<groupID>/<artifactID>" --fromnexus2
+./nexsync syncartifact --urlfrom="<repo URL to sync from>" --repofrom="<repo to sync from>" \
+    --userfrom="<user with download permissions>" --passfrom='<password for userFrom>' --tmpdir="./tmp" \
+    --urlto="<repo URL to sync to>" --repoto="<repo to sync to>" \
+    --userto="<user with upload permissions>" --passto='<password for userTo>' \
+    --artifact="<groupID>/<artifactID>" --fromnexus2
 ```
 
 ## Why?
